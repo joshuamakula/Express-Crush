@@ -6,6 +6,7 @@ const app = express()
 
 // Middleware for static files
 app.use(express.static("public"))
+app.use(express.urlencoded({ extended: true }))
 
 // Tell application to use view engine/ejs
 app.set('view engine', 'ejs')
